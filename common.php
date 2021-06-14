@@ -7,7 +7,7 @@ if (!$installed) {
     $folderCreated = mkdir($folder, 0700);
 
     if (!$folderCreated) {
-        exit('Unable to setup, exited.');
+        exit('You already have a folder that should be privately used for storing sessions, exited.');
     }
 
     if (file_put_contents(__DIR__ . '/.installed', '') === false) {
